@@ -15,7 +15,10 @@ export const authMiddleware = async (
   next: NextFunction,
 ) => {
   const session = await auth.api.getSession({
-    headers: req.headers as Record<string, string>,
+    headers: new Headers({
+      authorization: req.headers["authorization"] || "",
+      origin: req.headers["origin"] || "http://localhost:3000",
+    }),
   });
 
   if (!session) {
