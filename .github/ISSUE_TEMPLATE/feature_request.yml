@@ -1,0 +1,32 @@
+name: Feature Request
+description: Proposer une nouvelle fonctionnalité
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Décris la fonctionnalité que tu voudrais voir dans LogPulse.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Quelle fonctionnalité tu veux ajouter ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème que ça résout
+      description: Quel problème cette feature résout-elle ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution envisagée
+    validations:
+      required: false
