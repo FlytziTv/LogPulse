@@ -1,0 +1,2 @@
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$PSScriptRoot\log_pulse-api'; npm run dev"
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$PSScriptRoot\log_pulse-front'; npm run dev"
