@@ -8,7 +8,9 @@ import {
   LayoutDashboard,
   ListTree,
   Settings,
+  UserCircle,
 } from "lucide-react";
+
 import { useSidebar, SidebarProvider } from "./NavBarContext";
 import { Logo } from "../icons/logo";
 
@@ -53,6 +55,12 @@ export default function NavBar() {
           Icon={Activity}
           href="/settings"
           label="Status App"
+          ClassName="text-[#a1a1a1] text-xs"
+        />
+        <ItemSidebar
+          Icon={UserCircle}
+          href="/profile"
+          label="Profil"
           ClassName="text-[#a1a1a1] text-xs"
         />
       </SideBarFooter>
