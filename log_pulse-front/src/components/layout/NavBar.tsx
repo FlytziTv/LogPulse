@@ -9,6 +9,7 @@ import {
   ListTree,
   Settings,
   UserCircle,
+  BookOpen,
 } from "lucide-react";
 
 import { useSidebar, SidebarProvider } from "./NavBarContext";
@@ -42,6 +43,7 @@ export default function NavBar() {
         />
         <ItemSidebar Icon={ListTree} href="/logs" label="Logs" />
         <ItemSidebar Icon={Settings} href="/settings" label="Settings" />
+        <ItemSidebar Icon={BookOpen} href="/docs" label="Docs" />
       </SideBarContent>
 
       <SideBarFooter>
