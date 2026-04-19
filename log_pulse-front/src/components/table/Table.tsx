@@ -6,8 +6,8 @@ import { LEVEL_COLORS, STATUS_COLORS } from "@/data/colors";
 import { useLogs } from "@/data/logs";
 import { LABELS } from "@/data/table";
 
-export default function Table() {
-  const logs = useLogs();
+export default function Table({ projectId }: { projectId: string }) {
+  const logs = useLogs(projectId);
 
   return (
     <div className="flex flex-col w-full">

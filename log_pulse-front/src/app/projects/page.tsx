@@ -4,6 +4,7 @@ import NavBar, { SidebarProvider } from "@/components/layout/NavBar";
 import { FolderOpen, Plus, Trash2, Copy, Check } from "lucide-react";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import Link from "next/link";
 
 const API_URL = process.env["NEXT_PUBLIC_API_URL"] || "http://localhost:4000";
 
@@ -34,7 +35,7 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     loadProjects();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    /// eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const createProject = async () => {
@@ -118,9 +119,12 @@ export default function ProjectsPage() {
               className="flex flex-row items-center justify-between p-4 rounded-lg border border-border-card bg-bg-card"
             >
               <div className="flex flex-col gap-1">
-                <p className="text-sm font-medium text-foreground">
+                <Link
+                  href={`/projects/${project.id}/logs`}
+                  className="text-sm font-medium text-foreground hover:text-text-secondary transition-colors"
+                >
                   {project.name}
-                </p>
+                </Link>
                 <div className="flex flex-row items-center gap-2">
                   <code className="text-xs text-text-secondary bg-background px-2 py-0.5 rounded">
                     {project.apiKey}
